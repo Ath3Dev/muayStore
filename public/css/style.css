@@ -1,3 +1,274 @@
-h1{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+    overflow-x: hidden;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+    transition: all 0.5s;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo h1 {
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    background: linear-gradient(to left, black 0%, red 100%);
+    background-clip: text; /* Aplicar o gradiente ao texto */
+    -webkit-background-clip: text; /* Necessário para compatibilidade com navegadores baseados em WebKit */
+    color: transparent; /* Oculta o texto original */
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.nav-item {
+    margin: 0 2.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+
+.nav-list a {
+    position: relative;
+}
+
+.nav-list a::after {
+    content: "";
+    left: 0;
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: red;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: 0.9s;
+    transform-origin: right;
+}
+
+.nav-list a:hover::after {
+    transform: scaleX(1);
+}
+
+.home {
+    margin-top: 3vw;
+    margin-bottom: 5.5vw;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+.home-text {
+    width: 45%;
+}
+
+.home-text .text-h1 {
+    font-size: 4vw;
+    margin-bottom: 2vw;
+}
+
+.text-h1 span{
     color: red;
+}
+
+.home-img {
+    width: 55%;
+}
+
+.home-img img {
+    width: 100%;
+}
+
+.home-btn {
+    display: block;
+    width: 24vw;
+    text-align: center;
+    padding: 1vw 2vw;
+    background: red;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.home-btn:hover {
+    background-color: rgba(243, 34, 34, 0.7);
+}
+
+/* /parte principal do site */
+
+/* configurando a section "Pai" e seus filhos*/
+
+.pai {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.pai>hr {
+    display: none;
+}
+
+/* Iniciando configuração do primeiro filho */
+.filho {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.img-2 {
+    width: 60%;
+}
+
+.img-2 img {
+    width: 100%;
+}
+
+.img-2-mobile {
+    display: none;
+}
+
+.conteudo {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.conteudo h2 {
+    color: #f10000fa;
+    font-size: 3vw;
+    font-weight: 700;
+    line-height: 3vw;
+}
+
+.conteudo hr {
+    background-color: #da1717;
+    height: 4px;
+    width: 15%;
+    margin: 0 0 2.5rem 0;
+    border-radius: 10px;
+
+}
+
+.conteudo p {
+    font-size: 1.5vw;
+    font-weight: 300;
+    line-height: 2vw;
+}
+
+/* /configuração primeiro filho */
+
+/* Iniciando configuração do segundo filho */
+
+.filho2 {
+    display: flex;
+    width: 100%;
+}
+
+.img-3 {
+    width: 25%;
+    align-self: flex-start;
+}
+
+.img-4 {
+    width: 20%;
+    align-self: flex-start;
+}
+
+.img-3 img,
+.img-4 img {
+    width: 100%;
+}
+
+.texto {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+}
+
+.texto h3 {
+    margin-bottom: 1vw;
+    font-size: 3vw;
+    color: #da1717;
+}
+
+.texto hr {
+    background-color: #da1717;
+    height: 4px;
+    width: 15%;
+    margin: 0 0 2.5rem 0;
+    border-radius: 10px;
+}
+
+.texto p {
+    margin-bottom: 36px;
+    text-align: center;
+    line-height: 2vw;
+    font-size: 1.5vw;
+}
+
+.texto a {
+    width: 24vw;
+    font-size: 1.5vw;
+    background-color: #da1717;
+    text-decoration: none;
+    color: white;
+    padding: 1vw 2vw;
+    border-radius: 10px;
+}
+
+.texto a:hover {
+    background-color: rgba(243, 34, 34, 0.8);
+}
+
+footer {
+    border-top: 2px solid #da1717;
+    margin-top: 5%;
+    text-align: center;
+}
+
+footer h6 {
+    margin-top: 2.5%;
+    font-size: medium;
+    font-weight: 300;
 }
