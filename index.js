@@ -10,6 +10,9 @@ app.use('/public', express.static('public'));
 router.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'pages/index.html'))
 });
+router.get('/catalogo', function(req, res) {
+    res.sendFile(path.join(__dirname, 'pages/catalogo.html'))
+});
 
 app.use('/', router);
 
